@@ -1,0 +1,19 @@
+{
+  "name": "sysadminday",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "description": "Microsite for sysadminday.digitalocean.com (and sysadmin.love)",
+  "main": "dist/index.html",
+  "scripts": {
+    "build": "node src/build.js",
+    "dev": "nodemon -e html,scss,js,svg --watch src --exec \"npm run build && npm run dev:serve\"",
+    "dev:serve": "http-server -p 8080 dist"
+  },
+  "author": "DigitalOcean",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "http-server": "^14.1.1",
+    "nodemon": "^2.0.19"
+  }
+}
