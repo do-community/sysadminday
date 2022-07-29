@@ -1,6 +1,10 @@
 $blue: #0d85ff;
 $white: #fff;
 
+* {
+  box-sizing: border-box;
+}
+
 html,
 body {
   margin: 0;
@@ -10,7 +14,11 @@ body {
 body {
   display: flex;
   flex-flow: row nowrap;
-  height: 100vh;
+  min-height: 100vh;
+
+  @media screen and (max-width: 70em) {
+    flex-flow: column nowrap;
+  }
 
   > * {
     flex-basis: 100%;
@@ -34,18 +42,18 @@ header {
 
   > h1 {
     font-size: 3em;
-    margin: 1em 2em 0;
+    margin: 3em 2em 0;
   }
 
   > p {
     font-size: 1.5em;
     font-weight: 300;
-    margin: 1.25em 2em 0;
+    margin: 2em 2em 0;
   }
 
   > a {
     display: block;
-    margin: 3em auto 1em;
+    margin: 3em auto;
     line-height: 0;
 
     &:hover,
@@ -58,8 +66,9 @@ header {
     }
 
     > svg {
-      width: 5em;
-      height: 5em;
+      width: 8em;
+      height: 8em;
+      padding: 1em;
     }
   }
 }
@@ -94,6 +103,17 @@ main {
       width: 80%;
       height: auto;
       margin: auto;
+      padding: 2em;
+
+      @media screen and (max-width: 60em) {
+        width: 90%;
+        padding: 2em 1em;
+      }
+
+      @media screen and (max-width: 40em) {
+        width: 100%;
+        padding: 2em 0;
+      }
     }
   }
 
