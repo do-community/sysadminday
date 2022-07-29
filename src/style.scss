@@ -1,0 +1,115 @@
+$blue: #0d85ff;
+$white: #fff;
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-flow: row nowrap;
+  height: 100vh;
+
+  > * {
+    flex-basis: 100%;
+  }
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  color: $white;
+  text-align: center;
+
+  background-color: $blue;
+  background-image: url("./img/pattern.svg");
+  background-repeat: repeat;
+  background-size: 28em;
+  background-position: center;
+
+  > h1 {
+    font-size: 3em;
+    margin: 1em 2em 0;
+  }
+
+  > p {
+    font-size: 1.5em;
+    font-weight: 300;
+    margin: 1.25em 2em 0;
+  }
+
+  > a {
+    display: block;
+    margin: 3em auto 1em;
+    line-height: 0;
+
+    &:hover,
+    &:focus {
+      > svg {
+        > path {
+          fill: mix($blue, $white);
+        }
+      }
+    }
+
+    > svg {
+      width: 5em;
+      height: 5em;
+    }
+  }
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+
+  > div {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding: 3em;
+
+    > h3 {
+      color: $blue;
+      font-size: 2em;
+      margin: 0 0 1em;
+    }
+
+    > p {
+      font-size: 1.125em;
+      font-weight: 300;
+      margin: 0;
+
+      > i {
+        font-size: .625em;
+      }
+    }
+
+    > svg {
+      width: 80%;
+      height: auto;
+      margin: auto;
+    }
+  }
+
+  > footer {
+    display: flex;
+    border-top: 1px solid rgba(0, 0, 0, .2);
+    padding: 1.5em 2em;
+
+    > a {
+      display: block;
+      line-height: 0;
+
+      > svg {
+        height: 1.5em;
+        width: auto;
+      }
+    }
+  }
+}
