@@ -13,6 +13,7 @@
   "author": "DigitalOcean",
   "license": "Apache-2.0",
   "devDependencies": {
+    "esbuild": "^0.14.51",
     "http-server": "^14.1.1",
     "nodemon": "^2.0.19",
     "postcss": "^8.4.14",
