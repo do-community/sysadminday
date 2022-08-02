@@ -120,16 +120,47 @@ main {
 
   > footer {
     display: flex;
+    flex-flow: row wrap;
+    align-items: center;
     border-top: 1px solid rgba($black, .2);
     padding: 1.5em 2em;
 
     > a {
       display: block;
       line-height: 0;
+        margin: 0 auto 0 0;
 
       > svg {
         height: 1.5em;
         width: auto;
+      }
+    }
+
+    > div {
+      display: flex;
+
+      > a {
+        line-height: 0;
+        background: $blue;
+        padding: .5em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 2em;
+        width: 2em;
+        border-radius: .5em;
+        margin: .25em;
+
+        &:hover,
+        &:focus {
+          background: mix($blue, $black, 80%);
+        }
+
+        > svg {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
       }
     }
   }
