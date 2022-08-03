@@ -37,6 +37,7 @@ const main = async () => {
         .use(posthtmlInsertAt({ selector: 'body', append: `<script>${js}</script>` }))
         .use(htmlnano({
             collapseWhitespace: true,
+            removeComments: false,
             minifyCss: true,
             minifyJs: true,
             minifySvg: {
