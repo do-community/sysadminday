@@ -1,6 +1,7 @@
 import posthtml from 'posthtml';
 import posthtmlInclude from 'posthtml-include';
 import { posthtmlInsertAt } from 'posthtml-insert-at';
+import htmlnano from 'htmlnano';
 import postcss from 'postcss';
 import postcssUrl from 'postcss-url';
 import sass from 'sass';
@@ -34,6 +35,23 @@ const main = async () => {
         .use(posthtmlInclude({ root: fileURLToPath(new URL('./', import.meta.url)) }))
         .use(posthtmlInsertAt({ selector: 'head', append: `<style>${style.css}</style>` }))
         .use(posthtmlInsertAt({ selector: 'body', append: `<script>${js}</script>` }))
+        .use(htmlnano({
+            collapseWhitespace: true,
+            minifyCss: true,
+            minifyJs: true,
+            minifySvg: {
+                plugins: [
+                    {
+                        name: 'preset-default',
+                        params: {
+                            overrides: {
+                                removeViewBox: false,
+                            },
+                        },
+                    },
+                ],
+            },
+        }))
         .process(htmlSource);
 
     // Output the HTML

@@ -4,7 +4,7 @@
   "type": "module",
   "private": true,
   "description": "Microsite for sysadminday.digitalocean.com (and sysadmin.love)",
-  "main": "dist/index.html",
+  "main": "dist/before.html",
   "scripts": {
     "build": "node src/build.js",
     "dev": "nodemon -e html,scss,js,svg --watch src --exec \"npm run dev:build && npm run dev:serve\"",
@@ -14,7 +14,9 @@
   "author": "DigitalOcean",
   "license": "Apache-2.0",
   "devDependencies": {
+    "cssnano": "^5.1.12",
     "esbuild": "^0.14.51",
+    "htmlnano": "^2.0.2",
     "http-server": "^14.1.1",
     "nodemon": "^2.0.19",
     "postcss": "^8.4.14",
@@ -23,6 +25,8 @@
     "posthtml-include": "^1.7.4",
     "posthtml-insert-at": "^0.2.7",
     "recursive-copy": "^2.0.14",
-    "sass": "^1.54.0"
+    "sass": "^1.54.0",
+    "svgo": "^2.8.0",
+    "terser": "^5.14.2"
   }
 }
