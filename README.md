@@ -1,6 +1,6 @@
 # SysAdmin Day
 
-Microsite for [sysadminday.digitalocean.com](https://sysadminday.digitalocean.com])
+Microsite for [sysadminday.digitalocean.com](https://sysadminday.digitalocean.com)
 (and [sysadmin.love](https://sysadmin.love)).
 
 Brought to you by your friends at [DigitalOcean](https://www.digitalocean.com).
