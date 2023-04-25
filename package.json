@@ -22,9 +22,9 @@
   },
   "homepage": "https://github.com/do-community/sysadminday#readme",
   "devDependencies": {
-    "cssnano": "^5.1.12",
+    "cssnano": "^6.0.0",
     "esbuild": "^0.14.51",
-    "htmlnano": "^2.0.2",
+    "htmlnano": "^2.0.4",
     "http-server": "^14.1.1",
     "nodemon": "^2.0.19",
     "postcss": "^8.4.14",
