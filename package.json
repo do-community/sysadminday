@@ -5,6 +5,9 @@
   "private": true,
   "description": "Microsite for sysadminday.digitalocean.com (and sysadmin.love)",
   "main": "dist/before.html",
+  "engines": {
+    "node": "18.17.0"
+  },
   "scripts": {
     "build": "node src/build.js",
     "dev": "nodemon -e html,scss,js,svg --watch src --exec \"npm run dev:build && npm run dev:serve\"",
