@@ -6,7 +6,7 @@
   "description": "Microsite for sysadminday.digitalocean.com (and sysadmin.love)",
   "main": "dist/before.html",
   "engines": {
-    "node": "18.17.0"
+    "node": "20.9.0"
   },
   "scripts": {
     "build": "node src/build.js",
