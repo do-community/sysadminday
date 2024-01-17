@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // Inject the YouTube video
             const iframe = document.createElement('iframe');
             const videoId = link.href.match(/^https:\/\/(?:www\.youtube\.com\/watch\?v=|youtu\.be\/)(.+)$/)[1];
-            iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
+            iframe.src = `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&rel=0`;
             iframe.frameborder = 0;
             modal.appendChild(iframe);
 
