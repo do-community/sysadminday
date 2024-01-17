@@ -1,19 +1,19 @@
+import fs from 'node:fs/promises';
+import { fileURLToPath } from 'node:url';
 import posthtml from 'posthtml';
 import posthtmlInclude from 'posthtml-include';
 import { posthtmlInsertAt } from 'posthtml-insert-at';
 import htmlnano from 'htmlnano';
 import postcss from 'postcss';
 import postcssUrl from 'postcss-url';
-import sass from 'sass';
+import { compileAsync } from 'sass';
 import esbuild from 'esbuild';
 import copy from 'recursive-copy';
-import fs from 'fs/promises';
-import { fileURLToPath } from 'url';
 
 const main = async () => {
     // Compile our SCSS w/ sass, and inline the images w/ postcss-url
     const styleSource = fileURLToPath(new URL('./index.scss', import.meta.url));
-    const style = await sass.compileAsync(styleSource, { style: 'compressed' })
+    const style = await compileAsync(styleSource, { style: 'compressed' })
         .then(({ css }) => postcss()
             .use(postcssUrl({ url: 'inline', encodeType: 'base64' }))
             .process(css, { from: styleSource }));
